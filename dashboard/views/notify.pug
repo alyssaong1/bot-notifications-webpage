@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  .container
+    h2 Send a notification to all users via the chatbot
+    // form to send message to all
+    form(method='POST' action='/notify')
+      div.form-group
+        label(for='message') Message:
+        input#name.form-control(type='text', placeholder='Enter message to send' name='message')
+      button.btn.btn-primary(type='submit') Send notification
